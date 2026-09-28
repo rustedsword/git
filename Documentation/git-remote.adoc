@@ -107,6 +107,12 @@ branch. For example, if the default branch for `origin` is set to
 `master`, then `origin` may be specified wherever you would normally
 specify `origin/master`.
 +
+This command does not change the remote repository's own `HEAD`, i.e.
+the branch that a fresh `git clone` of that remote will check out;
+every change it makes is local. Git provides no way to change a
+remote's own default branch from the client; how that is done depends
+on how the remote is hosted.
++
 With `-d` or `--delete`, the symbolic ref `refs/remotes/<name>/HEAD` is deleted.
 +
 With `-a` or `--auto`, the remote is queried to determine its `HEAD`, then the
